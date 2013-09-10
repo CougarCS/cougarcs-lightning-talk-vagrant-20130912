@@ -1,5 +1,59 @@
 Vagrant
+	Questions.
+		know VMs?
+		used VMs?
 	: spinning up virtual machines made easy!
 	http://www.vagrantup.com/
 		installers and packages
 		$ apt-get install vagrant
+	CLI-based
+	We're going to use VirtualBox to host our VMs [the default]
+	Get started
+		[ host ] $ mkdir my-cool-project && cd my-cool-project
+			# make a project directory and change in to it
+		[ host ] $ vi cool_script; chmod u+x cool_script
+			# some code!
+		[ host ]$ vagrant init precise32 http://files.vagrantup.com/precise32.box
+			# this will create Vagrantfile and use precise32.box as our base image
+		[ host ] $ vagrant up
+			# build our VM! (takes ~5 minutes the first time as we download
+			# the box over the network)
+			# 
+			# It'll be faster next time because it will be saved.
+		[ host ] $ vagrant ssh
+			# Woot! We have a prompt!
+		[ vagrant ] $ ls /vagrant/
+			# Our files!
+		[ vagrant ] $ ./cool_script
+			# Yay!
+		[ vagrant ] $ touch foobar; exit
+			# create a file
+		[ host ] $ ls
+			# and it's over here too!
+	OK, I'm done
+		[ host ] $ vagrant suspend
+			# save state of memory
+	No, I'm *really* done
+		[ host ] $ vagrant halt
+			# shut down
+	Kill it with fire!
+		[ host ] $ vagrant destroy
+			# VM go bye-bye
+	Tabula rasa
+		[ host ] $ vagrant up
+			# builds it up again
+	Wait, back up. Vagrantfile?
+		Yeah.
+		let's take a look
+		[ host ] $ vi Vagrantfile
+			# explain provisioning
+			# http://docs.vagrantup.com/v2/provisioning/shell.html
+			#
+			# more advanced: configuration management: puppet, chef, cfengine
+			#
+			# explain networking
+			# 
+			# enable forwarded port
+		[ host ] $ vagrant reload
+			# enable changes
+
