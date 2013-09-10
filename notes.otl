@@ -1,0 +1,5 @@
+Vagrant
+	: spinning up virtual machines made easy!
+	http://www.vagrantup.com/
+		installers and packages
+		$ apt-get install vagrant
