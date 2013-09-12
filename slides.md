@@ -2,6 +2,7 @@
 % Zaki Mughal, CougarCS, University of Houston
 % 2013-09-12
 
+
 # Questions
 
 > - who knows what a VM is?
@@ -95,7 +96,7 @@
 ```
 
 
----
+----
 
 Kill it with fire!
 
@@ -111,7 +112,7 @@ Tabula rasa
 	# builds it up again
 ```
 
----
+----
 
 # Vagrantfile (aka the magic!)
 
@@ -134,8 +135,9 @@ Vagrant.configure("2") do |config|
 #  ...
 end
 ```
+----
 
-# provision-vm.sh
+provision-vm.sh
 
 ```bash
 #!/bin/sh
