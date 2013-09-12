@@ -156,7 +156,14 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <div class="section slide level1" id="section-2">
 
 <p>Vagrantfile</p>
-<p><code>ruby Vagrant.configure(&quot;2&quot;) do |config| #  ...   config.vm.provision &quot;shell&quot;, path: &quot;provision-vm.sh&quot; #  ... end</code> ----</p>
+<pre class="sourceCode ruby"><code class="sourceCode ruby"><span class="dt">Vagrant</span>.configure(<span class="st">&quot;2&quot;</span>) <span class="kw">do</span> |config|
+<span class="co">#  ...</span>
+  config.vm.provision <span class="st">&quot;shell&quot;</span>, path: <span class="st">&quot;provision-vm.sh&quot;</span>
+<span class="co">#  ...</span>
+<span class="kw">end</span></code></pre>
+</div>
+<div class="section slide level1" id="section-3">
+
 <p>provision-vm.sh</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="co">#!/bin/sh</span>
 
