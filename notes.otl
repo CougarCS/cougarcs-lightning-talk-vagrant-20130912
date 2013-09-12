@@ -43,7 +43,6 @@ Vagrant
 		[ host ] $ vagrant up
 			# builds it up again
 	Wait, back up. Vagrantfile?
-		Yeah.
 		let's take a look
 		[ host ] $ vi Vagrantfile
 			# explain provisioning
